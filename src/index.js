@@ -5,14 +5,14 @@ const userroute=require('./routers/user');
 const taskroute=require('./routers/task');
 const Tasks=require('./models/task');
 const app=express();
-const port=process.env.port;
+const PORT=process.env.PORT;
 
 
 app.use(express.json());
 app.use(userroute);
 app.use(taskroute);
-app.listen(port,()=>{
-    console.log("Server Started "+ port);
+app.listen(PORT,()=>{
+    console.log("Server Started "+ PORT);
 })
 const Task=require('./models/task');
 

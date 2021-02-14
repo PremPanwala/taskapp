@@ -11,6 +11,7 @@ const Tasks=require('../src/models/task');
 // })
 
 const deleteTaskandCount=async(id)=>{
+    console.log("HI BRO")
     const tasks= await Tasks.findByIdAndDelete(id);
     const ans= await  Tasks.countDocuments({completed:false});
     return ans;
